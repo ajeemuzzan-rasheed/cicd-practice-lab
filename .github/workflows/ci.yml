@@ -19,5 +19,5 @@ jobs:
       - name: Run test
         run: |
           echo "Running test..."
-          test -f README.md
+          test -f DOES_NOT_EXIST.md
           echo "Test passed"
