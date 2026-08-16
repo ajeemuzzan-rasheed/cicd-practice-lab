@@ -1,1 +1,23 @@
+name: CI Practice
 
+on:
+  push:
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Check repository
+        run: |
+          echo "CI pipeline is running"
+          echo "Repository checked out successfully"
+
+      - name: Run test
+        run: |
+          echo "Running test..."
+          test -f README.md
+          echo "Test passed"
